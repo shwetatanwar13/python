@@ -1,0 +1,20 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from collections import OrderedDict
+Market_dict=OrderedDict()
+N=int(input())
+for i in range(0,N):
+    a=input().split()
+    if len(a)==2:
+     if a[0] in Market_dict.keys():
+        Market_dict[a[0]]+=int(a[1])
+     else:
+        Market_dict[a[0]]=int(a[1])
+    else:
+      item=' '.join(a[i] for i in range(0,len(a)-1))
+      
+      if item in Market_dict.keys():
+        Market_dict[item]+=int(a[len(a)-1])
+      else:
+        Market_dict[item]=int(a[len(a)-1])
+for i,k in Market_dict.items():
+    print(i,k)

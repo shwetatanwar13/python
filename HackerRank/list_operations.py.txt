@@ -1,0 +1,22 @@
+if __name__ == '__main__':
+    N = int(raw_input())
+    list1=[]
+    for i in range(0,N):
+     task=raw_input()
+     jobs=task.split()
+     if jobs[0] =='insert':
+       list1.insert(int(jobs[1]),int(jobs[2]))
+     elif jobs[0]=='remove':
+       list1.remove(int(jobs[1]))
+     elif jobs[0]=='print':
+        print(list1)
+     elif jobs[0]=='append':
+        list1.append(int(jobs[1]))
+     elif jobs[0]=='pop':
+        list1.pop()
+     elif jobs[0]=='reverse':
+        list1.reverse()
+     elif jobs[0]=='sort':
+        list1.sort()
+     else:
+        print("Wrong Choice") 

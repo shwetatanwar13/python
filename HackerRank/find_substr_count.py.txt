@@ -1,0 +1,11 @@
+def count_substring(string, sub_string):
+    x=-1
+    run=True
+    list1=[]
+    while run:
+      x=string.find(sub_string,x+1)
+      if x==-1:
+        break
+      list1.append(x)
+    
+    return len(list1)
