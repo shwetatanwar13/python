@@ -1,0 +1,16 @@
+from collections import Counter
+class Solution(object):
+    def numJewelsInStones(self, J, S):
+        """
+        :type J: str
+        :type S: str
+        :rtype: int
+        """
+        sum=0
+        d=Counter(S)
+        for i in J:
+            sum=sum+d[i]
+        print(sum)
+
+s=Solution()
+s.numJewelsInStones("b","aAAbbbb")
