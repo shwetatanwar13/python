@@ -1,0 +1,15 @@
+from collections import Counter
+class Solution(object):
+    def isAnagram(self, s, t):
+        """
+        :type s: str
+        :type t: str
+        :rtype: bool
+        """
+        if len(s)!=len(t):
+            return False
+        else:
+            return(Counter(s)==Counter(t))
+
+s=Solution()
+print(s.isAnagram("anagram","nagaram"))
