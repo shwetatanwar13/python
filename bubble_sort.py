@@ -1,8 +1,12 @@
-def bubble_sort(l):
-    for i in range(len(l)):
-        for j in range(1,len(l)-i):
-            if l[j-1]>l[j]:
-                l[j-1],l[j]=l[j],l[j-1]
-    print(l)
+def bubble_sort(nums):
+    for i in range(0,len(nums)):
+        swap_count = 0
+        for j in range(0,len(nums)-i-1):
+            if nums[j] > nums[j+1]:
+                nums[j],nums[j+1] = nums[j + 1],nums[j]
+                swap_count = swap_count +1
+        if swap_count == 0:
+            break
+    return nums
 
-bubble_sort([0,1,2,1,1,2,0,0,2])
+print(bubble_sort([4,3,1,2]))
